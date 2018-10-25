@@ -69,3 +69,6 @@ wifi_manager/.project
 Doxyfile
 wifi_manager/doc/
 
+build/*
+smarthouse-card-esp32/build/
+smarthouse-card-esp32/build/*
