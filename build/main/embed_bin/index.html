@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<script src="/jquery.js"></script>
+		<link rel="stylesheet" href="/style.css">
+		<script src="/code.js"></script>
+		<title>SH-Wifi-Manager</title>
+	</head>
+	<body>
+		<div id="app">
+			<div id="app-wrap">
+				<div id="wifi">
+					<header>
+						<h1>Wi-Fi</h1>
+					</header>
+					<div id="wifi-status">
+						<h2>Conectado a:</h2>
+						<section id="connected-to">
+							<div class="ape"><div class="w0"><div class="pw"><span></span></div></div></div>
+						</section>
+					</div>
+					<h2>Seleccione una red...</h2>
+					<section id="wifi-list">
+					</section>
+				</div>
+				<div id="connect">
+					<header>
+						<h1>Ingrese la Contraseña</h1>
+					</header>
+					<h2>Contraseña para <span id="ssid-pwd"></span></h2>
+					<section>
+						<input id="pwd" type="password" placeholder="Password" value="">
+					</section>
+					<div class="buttons">
+							<input id="join" type="button" value="Conectar" />
+							<input id="cancel" type="button" value="Cancelar"/>
+					</div>
+				</div>
+				<div id="connect-wait">
+					<header>
+						<h1>Por favor espere...</h1>
+					</header>
+					<h2>Conectando a <span id="ssid-wait"></span></h2>
+					<section>
+						<div id="loading">
+							<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+							<p class="tctr">Puede perder el acceso wifi a la tarjeta Smart House, mientras realiza la conexión. Por favor espere hasta que su dispositivo se conecte automaticante. Esto puede llevar hasta 30s</p>
+						</div>
+						<div id="connect-success">
+							<h3 class="gr">Exito!</h3>
+						</div>
+						<div id="connect-fail">
+							<h3 class="rd">Conexión Fallida</h3>
+							<p class="tctr">Por favor compruebe la contraseña Wi-Fi y asegurese de que el punto de acceso tenga buena señal.</p>
+						</div>
+					</section>
+					<div class="buttons">
+						<input id="ok-connect" type="button" value="OK" class="ctr" />
+					</div>
+				</div>
+				<div id="connect-details">
+					<div id="connect-details-wrap">
+						<header>
+							<h1></h1>
+						</header>
+						<h2></h2>
+						<section>
+							<div class="buttons">
+								<input id="disconnect" type="button" value="Desconectar" class="ctr"/>
+							</div>
+						</section>
+						<h2>Datos de Conexión</h2>
+						<section>
+							<div class="ape brdb">IP Address:<div id="ip" class="fr"></div></div>
+							<div class="ape brdb">Subnet Mask:<div id="netmask" class="fr"></div></div>
+							<div class="ape">Default Gateway:<div id="gw" class="fr"></div></div>
+						</section>
+						<div class="buttons">
+							<input id="ok-details" type="button" value="OK" class="ctr" />
+						</div>
+					</div>
+					<div id="diag-disconnect" class="diag-box">
+						<div class="diag-box-win">
+							<p>¿Esta seguro que desea desconectarse de este Wi-Fi?</p>
+							<div class="buttons">
+								<input id="no-disconnect" type="button" value="No" />
+								<input id="yes-disconnect" type="button" value="Si" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="credits">
+			<header>
+				<h1>About this app...</h1>
+			</header>
+			<h2></h2>
+			<section>
+				<p><strong>esp32-wifi-manager</strong>, &copy; 2017, Tony Pottier<br />Licensed under the MIT License.</p>
+				<p>
+					This app would not be possible without the following libraries:
+				</p>
+				<ul>
+					<li>SpinKit, &copy;  2015, Tobias Ahlin. Licensed under the MIT License.</li>
+					<li>jQuery, The jQuery Foundation. Licensed under the MIT License.</li>
+					<li>cJSON, &copy; 2009-2017, Dave Gamble and cJSON contributors. Licensed under the MIT License.</li>
+				</ul>
+			</section>
+			<div class="buttons">
+				<input id="ok-credits" type="button" value="OK" class="ctr" />
+			</div>
+		</div>
+	</body>
+<html>

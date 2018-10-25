@@ -1,0 +1,23 @@
+#ifndef DC_CONTROL_H_INCLUDED
+#define DC_CONTROL_H_INCLUDED
+
+#define LEDC_LS_TIMER          LEDC_TIMER_0
+#define LEDC_LS_MODE           LEDC_LOW_SPEED_MODE
+
+#define LEDC_LS_CH2_GPIO       CDC3
+#define LEDC_LS_CH2_CHANNEL    LEDC_CHANNEL_2
+
+#define LEDC_LS_CH3_GPIO       CDC4
+#define LEDC_LS_CH3_CHANNEL    LEDC_CHANNEL_3
+
+#define LEDC_LS_CH6_GPIO       CDC1
+#define LEDC_LS_CH6_CHANNEL    LEDC_CHANNEL_6
+
+#define LEDC_LS_CH7_GPIO       CDC2
+#define LEDC_LS_CH7_CHANNEL    LEDC_CHANNEL_7
+
+#define LEDC_TEST_CH_NUM_C       (4)
+
+void PWM_task(void *arg);
+
+#endif
